@@ -1,7 +1,6 @@
 require 'sinatra'
 require 'mongo'
 require 'json'
-require 'bson_ext'
 include Mongo
 
 db = MongoClient.new('localhost', 27017).db('accelerometerolympics')
