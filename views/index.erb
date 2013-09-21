@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaderboards</title>
+	<style type="text/css" src="./bootstrap.css"></style>
+</head>
+<body>
+	<div class="container">
+		<div class="row">
+			<h1>Leaderboards</h1>
+		</div>
+		<div class="row">
+			<table class="table table-bordered table-striped table-responsive">
+				<thead>
+					<tr>
+						<th>Team</th>
+						<th>Points</th>
+						<th>Catches</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% leaderboards.each do |elem| %>
+					<tr>
+						<td><%= elem['team'] %></td>
+						<td><%= elem['points'] %></td>
+						<td><%= elem['catch'] %></td>
+					</tr>
+					<% end %>
+				</tbody>
+
+			</table>
+		</div>
+	</div>
+</body>
+<script type="text/javascript" src="./jquery.js"></script>
+<script type="text/javascript" src="./bootstrap.js"></script>
+</html>

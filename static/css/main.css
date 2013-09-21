@@ -1,0 +1,144 @@
+body {
+	font-family: 'Advent Pro';
+	background: #14191f;
+}
+
+h1 {
+	font-family: 'Advent Pro';
+	color: white;
+	font-size: 100px;
+	font-weight: 700;
+}
+
+h2 {
+
+	font-family: 'Advent Pro';
+	color: #a8b5c6
+}
+
+h3 {
+	font-family: 'Advent Pro';
+	margin: 0;
+	font-weight: 700;
+}
+
+.container {
+	width: 320px;
+	padding: 25px; 
+}
+
+input {
+	background: transparent;
+	border: none;
+	color: white;
+	font-size: 30px;
+	width: 70%;
+	border-bottom: solid 2px #a8b5c6;
+	margin-right: 10px;
+	height: 50px;
+	font-weight: 100;
+}
+
+input:focus {
+	outline: none;
+}
+
+#start {
+	text-transform: uppercase;
+	width: 25%;
+	height: 50px;
+	font-size: 20px;
+	font-weight: 700;
+}
+
+.row {
+	margin-bottom: 15px;
+	text-align: center;
+}
+
+#throw-circle {
+	background-color: grey;
+	border-radius: 50%;
+	width: 150px;
+	height: 150px;
+	margin: 0 auto;
+	display: table;
+}
+
+#throw {
+	display: table-cell;
+	vertical-align: middle;
+
+}
+
+.services-banner-container {
+	margin: 0 auto;
+	width: 175px;
+	position: relative;
+}
+.rectangle {
+	height: 50px;
+	position: absolute;
+	z-index: 500;
+	-moz-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	-webkit-box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	box-shadow: 0px 0px 4px rgba(0,0,0,0.55);
+	width: 175px;
+	font-weight: 700;
+	font-size: 30px;
+	margin: 0 0 10px;
+	text-align: center;
+	color: white;
+	position: absolute;
+	height: 50px;
+	background-color: darkgrey;
+	padding: 10px;
+}
+
+.ribbon-top {
+	border-color: grey transparent transparent;
+}
+.ribbon-bottom {
+	border-color: transparent transparent grey;
+}
+
+.l-triangle-top {
+	border-style:solid;
+	border-width:40px;
+	height:0px;
+	width:0px;
+	position: absolute;
+	float: left;
+	top: 2px;
+	left: -50px;
+}
+.l-triangle-bottom {
+	border-style:solid;
+	border-width:40px;
+	height:0px;
+	width:0px;
+	position: absolute;
+	float: left;
+	top: -32px;
+	left: -50px;
+}
+.r-triangle-top {
+	border-style:solid;
+	border-width:40px;
+	height:0px;
+	width:0px;
+	position: absolute;
+	float: right;
+	top: 2px;
+	right: -50px;
+}
+.r-triangle-bottom {
+	border-style:solid;
+	border-width:40px;
+	height:0px;
+	width:0px;
+	position: absolute;
+	float: right;
+	top: -32px;
+	right: -50px;
+}
