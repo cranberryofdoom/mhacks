@@ -7,7 +7,7 @@ include Mongo
 
 def get_connection
   return @db_connection if @db_connection
-  db = URI.parse(ENV['mongodb://<ashley.qian@duke.edu>:<blade1120>@paulo.mongohq.com:10067/Leaderboard'])
+  db = URI.parse(ENV['mongodb://ashley.qian@duke.edu:blade1120@paulo.mongohq.com:10067/Leaderboard'])
   db_name = db.path.gsub(/^\//, '')
   @db_connection = Mongo::Connection.new(db.host, db.port).db(db_name)
   @db_connection.authenticate(db.user, db.password) unless (db.user.nil? || db.user.nil?)
