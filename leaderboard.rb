@@ -15,12 +15,12 @@ db = get_connection
 collection = db.collection('leaderboard')
 # { name: "TEAM NAME", score: 12013414, throwCount: 4 }
 
-post '/leaderboard' do
+post '/' do
 	data = JSON.parse request.body.read
 	collection.insert data
 end
 
-get '/leaderboard' do
+get '/' do
 
 	#.find.each { |row| puts row.inspect }
 	leaders = collection.find.limit(100).to_a
