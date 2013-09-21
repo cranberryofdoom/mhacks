@@ -1,2 +1,2 @@
-require './hi'
+require './leaderboard'
 run Sinatra::Application
