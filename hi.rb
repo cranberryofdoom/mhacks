@@ -1,8 +1,9 @@
 require 'sinatra'
 require 'mongo'
 require 'json'
-include Mongo
 require 'uri'
+include Mongo
+
 
 def get_connection
   return @db_connection if @db_connection
