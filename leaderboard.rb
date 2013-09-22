@@ -1,6 +1,8 @@
 require 'sinatra'
 require 'mongo'
 require 'json'
+require 'URI'
+require 'CGI'
 include Mongo
 
 
@@ -26,11 +28,10 @@ get '/' do
 end
 
 get '/addleader' do
-	url = request.url
-	puts url
-	u = URI.parse(url)
-	p = CGI.parse(u.query)
-	data = p.to_json
-	puts data
+	query = CGI::parse(URI(request.url).query)
+	data = {
+		:team => query['team'][0],
+		:points => query['points'][0].to_i
+	}
 	collection.insert data
 end
