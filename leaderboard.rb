@@ -27,7 +27,7 @@ get '/' do
 	erb :index, :locals => { :leaderboards => leaders }
 end
 
-post '/addleader' do
+get '/addleader' do
 	query = CGI::parse(URI(request.url).query)
 	data = {
 		:team => query['team'][0],
