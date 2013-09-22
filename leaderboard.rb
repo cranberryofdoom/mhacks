@@ -29,6 +29,6 @@ get '/addleader' do
 	url = request.url
 	u = URI.parse('url ')
 	p = CGI.parse(u.query)
-	data = JSON.parse(p)
+	data = JSON.parse p
 	collection.insert data
 end
