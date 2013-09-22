@@ -30,8 +30,8 @@ end
 get '/addleader' do
 	query = CGI::parse(URI(request.url).query)
 	data = {
-		:team => query['team'][0],
-		:points => query['points'][0].to_i
+		:team => query['team'],
+		:points => query['points'].to_i
 	}
 	collection.insert data
 end
