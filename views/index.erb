@@ -13,20 +13,20 @@
 			<h1>Leaderboards</h1>
 		</div>
 		<div class="row">
-			<table class="table table-bordered table-striped table-responsive">
+			<table class="table table-bordered table-responsive">
 				<thead>
 					<tr>
-						<th>Team</th>
-						<th>Points</th>
-						<th>Catches</th>
+						<th id="rank">Rank</th>
+						<th id="team">Team</th>
+						<th id="points">Points</th>
 					</tr>
 				</thead>
 				<tbody>
-					<% leaderboards.each do |elem| %>
+					<% leaderboards.each_with_index do |elem, index| %>
 					<tr>
-						<td><%= elem['team'] %></td>
-						<td><%= elem['points'] %></td>
-						<td><%= elem['catch'] %></td>
+						<td id="rank-leaders"><%= index + 1 %></td>
+						<td id="team-leaders"><%= elem['team'] %></td>
+						<td id="points-leaders"><%= elem['points'] %></td>
 					</tr>
 					<% end %>
 				</tbody>

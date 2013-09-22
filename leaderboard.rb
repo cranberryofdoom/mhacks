@@ -21,9 +21,6 @@ post '/' do
 end
 
 get '/' do
-
-	#.find.each { |row| puts row.inspect }
-	leaders = collection.find.limit(100).to_a
-
+	leaders = collection.find({}, :sort => ['points', 'desc']).limit(100).to_a
 	erb :index, :locals => { :leaderboards => leaders }
 end

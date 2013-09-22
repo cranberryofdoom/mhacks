@@ -9,18 +9,38 @@ body {
 	padding: 25px; 
 }
 
+.table-bordered, .table-bordered>thead>tr>th, .table-bordered>tbody>tr>th, .table-bordered>tfoot>tr>th, .table-bordered>thead>tr>td, .table-bordered>tbody>tr>td, .table-bordered>tfoot>tr>td {
+	border: 1px solid #14191f;
+}
+
 h1 {
 	font-family: 'Advent Pro';
 	color: white;
-	font-size: 50px;
+	font-size: 35px;
 	font-weight: 100;
+}
+
+table {
+	background-color: white;
 }
 
 th {
 	font-family: 'Advent Pro';
 	color: white;
-	font-size: 20px;
+	font-size: 15px;
 	font-weight: 700;
 	text-transform: uppercase;
 	text-align: center;
+}
+
+#team {
+	background-color: #ff4210;
+}
+
+#points {
+	background-color: #277fb5;
+}
+
+#rank {
+	background-color: #ffb210;
 }
