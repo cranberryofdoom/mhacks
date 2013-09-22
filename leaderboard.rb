@@ -2,7 +2,6 @@ require 'rubygems'
 require 'sinatra'
 require 'mongo'
 require 'json'
-require 'CGI'
 include Mongo
 
 
