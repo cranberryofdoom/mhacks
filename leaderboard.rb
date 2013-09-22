@@ -5,8 +5,8 @@ include Mongo
 
 
 def get_connection
-  client = MongoClient.from_uri("mongodb://admin:thisisrandom@paulo.mongohq.com:10067/Leaderboard")
-  client.db("Leaderboard")
+	client = MongoClient.from_uri("mongodb://admin:thisisrandom@paulo.mongohq.com:10067/Leaderboard")
+	client.db("Leaderboard")
 end
 
 db = get_connection
@@ -23,4 +23,12 @@ end
 get '/' do
 	leaders = collection.find({}, :sort => ['points', 'desc']).limit(100).to_a
 	erb :index, :locals => { :leaderboards => leaders }
+end
+
+get '/addleader' do
+	url = request.url
+	u = URI.parse('url ')
+	p = CGI.parse(u.query)
+	data = JSON.parse(p)
+	collection.insert data
 end
